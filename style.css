@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #ff0000;
+    color: #000;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+}
+
+/* HERO */
+.hero {
+    padding: 90px 15%;
+    background: #000;
+    color: #fff;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    letter-spacing: 4px;
+    transform: rotate(-1deg);
+}
+
+.hero p {
+    margin-top: 15px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+/* SPREADS (DOUBLE PAGE STYLE) */
+.spread {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 60px;
+    padding: 80px 15%;
+    position: relative;
+}
+
+.spread.invert {
+    grid-template-columns: 1fr 2fr;
+}
+
+.spread.chaotic {
+    grid-template-columns: 2fr 1fr 1fr;
+}
+
+/* TEXT */
+.text h2 {
+    font-size: 2.8rem;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.text.big p {
+    font-size: 1.2rem;
+}
+
+.text p {
+    margin-bottom: 20px;
+}
+
+/* IMAGES */
+.image img {
+    width: 100%;
+    display: block;
+    filter: grayscale(100%) contrast(160%);
+    box-shadow: -8px 8px 0 #000;
+}
+
+.image.tall img {
+    height: 500px;
+    object-fit: cover;
+}
+
+.image.wide img {
+    height: 350px;
+    object-fit: cover;
+}
+
+.image.float {
+    align-self: center;
+}
+
+.image.small img {
+    height: 220px;
+}
+
+/* CAPTION */
+.caption {
+    display: block;
+    margin-top: 10px;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+}
+
+/* FOOTER */
+footer {
+    background: #000;
+    color: #fff;
+    padding: 40px;
+    text-align: center;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+}
+
+/* RESPONSIVE */
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .spread,
+    .spread.invert,
+    .spread.chaotic {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        padding: 60px 10%;
+    }
+
+    .hero {
+        padding: 60px 10%;
+    }
+
+    .hero h1 {
+        font-size: 3rem;
+    }
+}
